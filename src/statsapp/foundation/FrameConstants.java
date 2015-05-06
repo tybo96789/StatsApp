@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package statsapp;
+package statsapp.foundation;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
 
 /**
  *
@@ -36,6 +37,7 @@ public enum FrameConstants{
         JMenuBar bar = new JMenuBar();
         JMenu file = new JMenu("File");
         JMenuItem exit = new JMenuItem("Exit");
+        exit.setMnemonic('x');
         frame.setJMenuBar(bar);
         bar.add(file);
         file.add(exit);

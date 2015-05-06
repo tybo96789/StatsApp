@@ -1,19 +1,23 @@
-package statsapp;
+package statsapp.core;
+
+import statsapp.foundation.AbstractFrame;
+import statsapp.foundation.FrameConstants;
 
 /**
  *
  * @author Tyler_Atiburcio
  */
-public class StatsApp {
+public class StatsAppRunner {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        Test testing = new Test();
-        FrameConstants.setFrameOperation(testing, FrameConstants.NORMAL_OPERATION);
-        testing.start();
+        new StatsAppCore().setVisible(true);
+//        Test testing = new Test();
+//        FrameConstants.setFrameOperation(testing, FrameConstants.NORMAL_OPERATION);
+//        testing.start();
        
     }
     

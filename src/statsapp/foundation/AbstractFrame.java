@@ -1,7 +1,9 @@
-package statsapp;
+package statsapp.foundation;
 
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -17,10 +19,11 @@ public abstract class AbstractFrame extends JFrame {
     protected final String TITLE;
     protected final int HEIGHT;
     protected final int WIDTH;
-    protected final JPanel panel;
     
     //Possible useful stuff
     protected Dimension dim;
+    protected AbstractFrame INSTANCE = this;
+    protected ArrayList<Container> arrayList = new ArrayList<Container>();
     
     //JMenu Bar
     protected JMenuBar menuBar;
@@ -30,9 +33,8 @@ public abstract class AbstractFrame extends JFrame {
         this.TITLE = TITLE;
         this.HEIGHT = HEIGHT;
         this.WIDTH = WIDTH;
+        this.setSize(WIDTH, HEIGHT);
         this.dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.panel = new JPanel();
-        this.add(this.panel);
     }
     
     public void start()
